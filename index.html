@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Festejando a Conexão Campo-Cidade</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="splash">
+    <div class="background-effect"></div>
+    <div class="water-effect"></div>
+    <h1 class="fade-in">🌾 Festejando a Conexão Campo-Cidade 🌐</h1>
+    <p class="fade-in delay1">Unindo o tradicional e o tecnológico em um só lugar.</p>
+    <button class="fade-in delay2" onclick="enterSite()">Entrar no site</button>
+  </div>
+
+  <div id="mainContent">
+    <header>
+      <h2>Bem-vindo ao nosso festival!</h2>
+      <nav>
+        <ul>
+          <li><a href="index1.html">Sobre o Evento</a></li>
+          <li><a href="index2.html">Programação</a></li>
+          <li><a href="index3.html">Galeria</a></li>
+          <li><a href="index4.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="card">
+        <h3>🌻 Integração entre campo e cidade</h3>
+        <p>Nosso festival celebra a sinergia entre a natureza e a inovação urbana. Levamos conhecimento tecnológico ao campo e trazemos os valores da terra à cidade.</p>
+      </section>
+      <section class="card">
+        <h3>🚜 Tecnologias Sustentáveis</h3>
+        <p>Drones na agricultura, sensores de umidade no solo e apps para gestão rural estão entre as inovações que unem os dois mundos.</p>
+      </section>
+      <section class="card">
+        <h3>🍃 Conhecimento que se compartilha</h3>
+        <p>O evento é também um espaço de escuta ativa: agricultores, cientistas, estudantes e empreendedores se encontram para trocar saberes e experiências.</p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 - Festejando a Conexão Campo-Cidade</p>
+    </footer>
+  </div>
+
+  <div class="rain" id="rain"></div>
+
+  <script>
+    function enterSite() {
+      const splash = document.getElementById('splash');
+      const main = document.getElementById('mainContent');
+      const rain = document.getElementById('rain');
+
+      splash.style.transition = 'opacity 1s ease';
+      splash.style.opacity = '0';
+
+      // Faz a chuva sumir aos poucos
+      rain.style.transition = 'opacity 2s ease';
+      rain.style.opacity = '0';
+
+      setTimeout(() => {
+        splash.style.display = 'none';
+        rain.style.display = 'none';
+        main.style.display = 'block';
+        main.style.opacity = '0';
+        setTimeout(() => {
+          main.style.transition = 'opacity 1.5s ease';
+          main.style.opacity = '1';
+        }, 50);
+      }, 2000);
+    }
+
+    // Criar gotas de chuva
+    const rainContainer = document.getElementById('rain');
+    for (let i = 0; i < 150; i++) {
+      const drop = document.createElement('div');
+      drop.classList.add('drop');
+      drop.style.left = `${Math.random() * 100}vw`;
+      drop.style.animationDuration = `${Math.random() * 1 + 0.5}s`;
+      drop.style.animationDelay = `${Math.random() * 5}s`;
+      rainContainer.appendChild(drop);
+    }
+  </script>
+</body>
+</html>
+
