@@ -12,7 +12,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Splash Screen */
 #splash {
   height: 100vh;
   display: flex;
@@ -71,7 +70,7 @@ button:hover {
   }
 }
 
-/* Conteúdo Principal */
+
 #mainContent {
   display: none;
   padding: 30px;
@@ -128,7 +127,7 @@ footer {
   margin-top: 40px;
 }
 
-/* Chuva */
+
 .rain {
   position: fixed;
   top: 0;
@@ -168,7 +167,7 @@ footer {
   pointer-events: none;
 }
 
-/* Galeria */
+
 #gallery {
   max-width: 900px;
   margin: 2rem auto;
@@ -195,7 +194,7 @@ footer {
 .gallery-img:nth-child(3) { animation-delay: 0.9s; }
 .gallery-img:nth-child(4) { animation-delay: 1.2s; }
 
-/* Contato */
+
 #contact-bg {
   position: fixed;
   top: 0;
@@ -261,7 +260,7 @@ footer {
   left: -200px;
   height: 175px;
   z-index: 5;
-  animation: moverTrator 12s linear infinite;
+  animation: moverTrator 8s linear infinite;
   display: none;
 }
 
@@ -296,7 +295,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 145px; /* Mostra só o topo da grama */
+  height: 145px; 
   background-image: url('green-grass-png.webp');
   background-repeat: repeat-x;
   background-size: cover;

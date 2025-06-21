@@ -58,7 +58,6 @@
       splash.style.transition = 'opacity 1s ease';
       splash.style.opacity = '0';
 
-      // Faz a chuva sumir aos poucos
       rain.style.transition = 'opacity 2s ease';
       rain.style.opacity = '0';
 
@@ -74,7 +73,6 @@
       }, 2000);
     }
 
-    // Criar gotas de chuva
     const rainContainer = document.getElementById('rain');
     for (let i = 0; i < 150; i++) {
       const drop = document.createElement('div');
